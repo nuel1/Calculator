@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="calculator.png" sizes="16x16">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    
+    <div class="page-wrapper">
+        <!-- INTRO HTML MARKUP -->
+        <div class="page-intro">
+            <div class="intro-box">
+                <div class="intro-img-wrapper">
+                    <img src="calculator.png" alt="">
+                </div>
+                <div class="intro-loader-title visibility--hidden">
+                    <p>Loading...</p>
+                    <div class="loader-box">
+                        <div class="loader-indicator"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- END OF INTRO MARKUP -->
+
+
+        <!-- CALCULATOR HELPER -->
+
+        <div class="tip-container hide">
+            <div class="helper-content-wrapper">
+                <div class="helper-box first-box opcty-zero">
+                    <div class="content-box">
+                        <p>
+                             Calculations are boldly displayed 
+                            in this section
+                        </p>
+                        <button class="confirm--js">Got it</button>
+                    </div>
+                    <div class="arrow arr-one">
+                        <img src="arrow.svg" alt="">
+                    </div>
+                </div>
+                <div class="helper-box second-box opcty-zero">
+                    <div class="content-box">
+                        <p>
+                             Previous calculations are 
+                             vertically displayed
+                             on this side.
+                        </p>
+                        <button class="confirm--js">Got it</button>
+                    </div>
+                    <div class="arrow arr-two">
+                        <img src="arrow.svg" alt="">
+                    </div>
+                </div>
+                <div class="helper-box third-box opcty-zero">
+                    <div class="content-box">
+                        <p>
+                             The trash icon clears 
+                             all history
+                             made
+                        </p>
+                        <button class="confirm--js">Got it</button>
+                    </div>
+                    <div class="arrow arr-three">
+                        <img src="arrow.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cal-wrapper hide">
+            <div class="hstry-box">
+                <div class="hstry-content">
+                    <header class="content-title">
+                        <div class="title">
+                            <span>History</span>
+                        </div>
+                    </header>
+
+                    <main class="main-content">
+                        <ul class="hstry-list">
+                        </ul>
+                    </main>
+                    <footer>
+                        <div class="del-icon--hstry">
+                        </div>
+                    </footer>
+                </div>
+            </div>
+            <div class="cal-box">
+                <div class="input-container">
+                    <form>
+                        <span class="entry"></span>
+                        <input type="text" class="input-area" placeholder="0">
+                    </form>
+                </div>
+                <div class="button-wrapper">
+                    <div class="row-1">
+                        <div class="col-1">
+                            <input type="button" value="7" style="border-top: 1px solid  #4D5EFF; border-left: 1px solid  #4D5EFF;">
+                        </div>
+                        <div class="col-2">
+                            <input type="button" value="8" style="border-top: 1px solid  #4D5EFF;">
+                        </div>
+                        <div class="col-3">
+                            <input type="button" value="9" style="border-top: 1px solid  #4D5EFF;">
+                        </div>
+                        <div class="col-4">
+                            <input type="button" value="&divide;" class='bgd divide--js operator' style="border-top: 1px solid  #5c66c5;">
+                        </div>
+                        <div class="col-5">
+                            <button class="del-icon--input bgd" style="border-top: 1px solid  #4D5EFF;">
+                                <span>
+                                    <img src="backspace.svg" alt="">
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row-2">
+                        <div class="col-1">
+                            <input type="button" value="4" style='border-left: 1px solid  #4D5EFF;'>
+                        </div>
+                        <div class="col-2">
+                            <input type="button" value="5">
+                        </div>
+                        <div class="col-3">
+                            <input type="button" value="6">
+                        </div>
+                        <div class="col-4">
+                            <input type="button" value="&times;" class='bgd times--js operator'>
+                        </div>
+                        <div class="col-5">
+                            <input type="button" value="CE" id="clearEtry" class='bgd'>
+                        </div>
+                    </div>
+                    <div class="row-3">
+                        <div class="col-1">
+                            <input type="button" value="1" style='border-left: 1px solid  #4D5EFF;'>
+                        </div>
+                        <div class="col-2">
+                            <input type="button" value="2">
+                        </div>
+                        <div class="col-3">
+                            <input type="button" value="3">
+                        </div>
+                        <div class="col-4">
+                            <input type="button" value="-" class='minus--js bgd operator'>
+                        </div>
+                        <div class="col-5">
+                            <input type="button" value="C" id="clearAl" class='bgd'>
+                        </div>
+                    </div>
+                    <div class="row-4">
+                        <div class="col-1">
+                            <input type="button" value="00" style='border-left: 1px solid  #4D5EFF;'>
+                        </div>
+                        <div class="col-2">
+                            <input type="button" value="0">
+                        </div>
+                        <div class="col-3">
+                            <input type="button" value="." class='operator'>
+                        </div>
+                        <div class="col-4">
+                            <input type="button" value="+" class='plus--js bgd operator'>
+                        </div>
+                        <div class="col-5">
+                            <input type="button" value="=" class='bgd operator' id="evaluate">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="calc.js"></script>
+</body>
+</html>
